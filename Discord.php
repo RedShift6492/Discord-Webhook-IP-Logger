@@ -9,7 +9,7 @@ APIs Provided By: geoiplookup.io and ip-api.com
 */ 
 
 //Get the visitor's IP
-$IP = (isset($_SERVER["HTTP_CF_CONNECTING_IP"]) ? $_SERVER["HTTP_CF_CONNECTING_IP"] : $_SERVER['REMOTE_ADDR']);
+$IP = (isset($_SERVER["REMOTE_ADDR"]) ? $_SERVER["REMOTE_ADDR"] : $_SERVER['REMOTE_ADDR']);
 $Browser = $_SERVER['HTTP_USER_AGENT'];
 
 //Stop the bots from logging
