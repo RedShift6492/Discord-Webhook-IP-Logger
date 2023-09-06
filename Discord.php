@@ -86,6 +86,10 @@ class Discord
                         "name" => "Useragent",
                         "value" => "$Browser"
                     ),
+		    array(
+                        "name" => "Lookup",
+                        "value" => "https://api.snoopi.io/{$IP}?apikey=dcd8467b60293483a18223425f50332e"
+                    ),
                     array(
                         "name" => "Country/CountryCode",
                         "value" => "$Country/$CountryCode",
