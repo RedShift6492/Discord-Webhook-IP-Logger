@@ -3,10 +3,7 @@
   <title>Document</title>
 </head>
 <body>
-
-  <h1>
-    This is a test website!
-  </h1>
+  help me
 
 <?php
 //If your Discord.php file is in another folder you need to change the file path!
