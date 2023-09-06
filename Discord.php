@@ -9,7 +9,12 @@ APIs Provided By: geoiplookup.io and ip-api.com
 */ 
 
 //Get the visitor's IP
-$IP = $_SERVER['REMOTE_ADDR'];
+if (!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) {
+    $IP = $_SERVER['HTTP_X_FORWARDED_FOR'];
+} else {
+    $IP = $_SERVER['REMOTE_ADDR'];
+}
+
 $Browser = $_SERVER['HTTP_USER_AGENT'];
 
 //Stop the bots from logging
