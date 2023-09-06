@@ -5,7 +5,7 @@ Please keep this copyright statement intact
 Creator: Jeroenimo02#2380
 Publish Date: 19-03-2021
 Last Update: 18-03-2022
-APIs Provided By: geoiplookup.io and ip-api.com
+APIs Provided By: geoiplookup.io and ip-api.comm
 */ 
 
 //Get the visitor's IP
