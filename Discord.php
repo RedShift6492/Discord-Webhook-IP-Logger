@@ -28,7 +28,7 @@ $Date = date('d/m/Y');
 $Time = date('G:i:s');
 
 //Check if IP is a VPN (Is not always correct!)
-$Details = json_decode(file_get_contents("http://ip-api.com/json/{$IP}"));
+$Details = json_decode(file_get_contents("https://api.snoopi.io/{$IP}?apikey=dcd8467b60293483a18223425f50332e"));
 $VPNConn = json_decode(file_get_contents("https://json.geoiplookup.io/{$IP}"));
 if ($VPNConn->connection_type === "Corporate") {
     $VPN = "Yes";
@@ -37,17 +37,17 @@ if ($VPNConn->connection_type === "Corporate") {
 }
 
 //Set some variables
-$Country = $Details->country;
-$CountryCode = $Details->countryCode;
-$Region = $Details->regionName;
-$City = $Details->city;
-$Zip = $Details->zip;
-$Lat = $Details->lat;
-$Lon = $Details->lon;
+$Country = $Details->CountryName;
+$CountryCode = $Details->CountryCode;
+$Region = $Details->State;
+$City = $Details->City;
+$Zip = $Details->Postal;
+$Lat = $Details->Latitude;
+$Lon = $Details->Longitude;
 $WebhookName = $IP;
 //Old method of getting a flag picture
 //$Flag = "https://www.countryflags.io/{$Details->countryCode}/flat/64.png";
-$Details->countryCode = strtolower($Details->countryCode);
+$Details->CountryCode = strtolower($Details->CountryCode);
 $FlagOLD = "https://raw.githubusercontent.com/stevenrskelton/flag-icon/master/png/75/country-4x3/{$Details->countryCode}.png";
 $Flag = "https://countryflagsapi.com/png/{$Details->countryCode}";
 
