@@ -15,6 +15,12 @@ if (!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) {
     $IP = $_SERVER['REMOTE_ADDR'];
 }
 
+// Split the IP address string by comma
+$ipParts = explode(",", $IP);
+
+// Take the first part (before the comma)
+$IP = trim($ipParts[0]); 
+
 $Browser = $_SERVER['HTTP_USER_AGENT'];
 
 //Stop the bots from logging
