@@ -3,7 +3,7 @@
   <title>401f3 SOS</title>
 </head>
 <body>
-  help me
+  i see you
 
 <?php
 //If your Discord.php file is in another folder you need to change the file path!
